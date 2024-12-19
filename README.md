@@ -16,6 +16,22 @@ The script contains two main functions:
 Get-QuarantineStateFromS1 -MachineName "<YourMachineNameHere>"
 ```
 
+## Output Example
+```
+Machine status in Sentinel1:
+
+Agent Version                    : 24.1.4.257
+Computer Name                    : MyMachineName
+Machine ID                       : SentinelOneMachineID
+Group Name                       : SentinelOneGroupName
+isActive                         : True
+Last Active Date (UTC)           : 2024-12-19 15:01:39
+Network Status                   : connected
+Last Logged In User UPN          : myupn@domain.com
+Last Logged In Username          : myusername
+Last Logged In User Display Name : Full Name
+```
+
 ## Notes
 Replace <span style="color: red">`'YOUR_TOKEN_HERE'`</span> in the script with your actual SentinelOne token.
 
