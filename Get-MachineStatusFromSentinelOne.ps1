@@ -33,7 +33,7 @@ function Get-MachineIDFromS1 {
         Authorization = "Bearer $Token"
     }
 
-    $URI = "https://usea1-kla.sentinelone.net/web/api/v2.1/agents?computerName__like=$MachineName"
+    $URI = "https://<instance>.sentinelone.net/web/api/v2.1/agents?computerName__like=$MachineName"
     
     try {
         $response = Invoke-WebRequest -Uri $URI -Headers $Headers -Method Get -ErrorAction Stop
@@ -99,7 +99,7 @@ function Get-QuarantineStateFromS1 {
         "Last Logged In User Display Name" = $null
     }
 
-    $URI = "https://usea1-kla.sentinelone.net/web/api/v2.1/agents?ids=$MachineID"
+    $URI = "https://<instance>.sentinelone.net/web/api/v2.1/agents?ids=$MachineID"
 
     try {
         $response = Invoke-WebRequest -Uri $URI -Headers $Headers -Method Get -ErrorAction Stop
